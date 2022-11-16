@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="662.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gmc.marsela.controller.CalculoController">
+   <children>
+      <MenuBar prefHeight="26.0" prefWidth="802.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Ver Historial">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Salir">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane layoutX="4.0" layoutY="35.0" prefHeight="622.0" prefWidth="793.0">
+         <children>
+            <Label layoutX="12.0" layoutY="24.0" text="Fecha" />
+            <Label layoutX="12.0" layoutY="76.0" text="Ciudad" />
+            <Label layoutX="12.0" layoutY="126.0" text="Sitio" />
+            <TextField fx:id="txtCiudad" layoutX="12.0" layoutY="94.0" prefHeight="26.0" prefWidth="394.0" />
+            <TextField fx:id="txtSitio" layoutX="11.0" layoutY="144.0" prefHeight="26.0" prefWidth="394.0" />
+            <Label layoutX="12.0" layoutY="177.0" text="Observaciones" />
+            <TextArea fx:id="txtaObservaciones" layoutX="11.0" layoutY="196.0" prefHeight="60.0" prefWidth="394.0" />
+            <Separator layoutX="163.0" layoutY="9.0" prefHeight="2.0" prefWidth="246.0" />
+            <Separator layoutX="420.0" layoutY="5.0" orientation="VERTICAL" prefHeight="256.0" prefWidth="8.0" />
+            <Label layoutX="10.0" layoutY="1.0" style="-fx-font-weight: bold;" text="INFORMACIÓN GENERAL" />
+            <Label layoutX="447.0" style="-fx-font-weight: BOLD;" text="VARIABLES DE CÁLCULO" />
+            <Separator layoutX="596.0" layoutY="9.0" prefHeight="3.0" prefWidth="190.0" />
+            <Label layoutX="449.0" layoutY="126.0" text="Cantidad de depósitos" />
+            <Pane layoutX="447.0" layoutY="147.0" prefHeight="60.0" prefWidth="332.0" style="-fx-background-color: #E4E4E4;">
+               <children>
+                  <Label layoutX="8.0" layoutY="5.0" text="Buen estado" />
+                  <Label layoutX="174.0" layoutY="7.0" text="Mal estado" />
+                  <TextField fx:id="txtCantDepBin" layoutX="8.0" layoutY="22.0" prefHeight="25.0" prefWidth="91.0" text="0" />
+                  <TextField fx:id="txtCantDepMal" layoutX="171.0" layoutY="23.0" prefHeight="25.0" prefWidth="91.0" text="0" />
+               </children>
+            </Pane>
+            <Label layoutX="447.0" layoutY="215.0" text="Nivel de contaminación" />
+            <ComboBox fx:id="cbNivelContaminacion" layoutX="448.0" layoutY="232.0" prefHeight="26.0" prefWidth="332.0" promptText="Seleccione..." />
+            <Label layoutX="448.0" layoutY="24.0" text="Medida del área" />
+            <TextField fx:id="txtMedidaArea" layoutX="448.0" layoutY="42.0" prefHeight="26.0" prefWidth="332.0" text="0" />
+            <Label layoutX="448.0" layoutY="76.0" text="Undad de medidda" />
+            <ComboBox fx:id="cbUnidadMedida" layoutX="447.0" layoutY="94.0" prefHeight="26.0" prefWidth="332.0" promptText="Seleccione..." />
+            <Separator layoutX="15.0" layoutY="271.0" prefHeight="3.0" prefWidth="767.0" />
+            <DatePicker fx:id="dateFecha" layoutX="13.0" layoutY="42.0" prefHeight="26.0" prefWidth="394.0" />
+            <Button fx:id="btnCalcular" layoutX="724.0" layoutY="283.0" mnemonicParsing="false" onAction="#onCalc" text="Calcular" />
+            <ScrollPane layoutX="15.0" layoutY="333.0" prefHeight="256.0" prefWidth="767.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="267.0" prefWidth="784.0">
+                     <children>
+                        <TextArea fx:id="txtaRes" maxWidth="766.0" prefHeight="248.0" prefWidth="766.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Button fx:id="btnGuardar" disable="true" layoutX="726.0" layoutY="594.0" mnemonicParsing="false" onAction="#onSave" text="Guardar" />
+            <Separator layoutX="99.0" layoutY="319.0" prefHeight="3.0" prefWidth="686.0" />
+            <Label layoutX="18.0" layoutY="311.0" style="-fx-font-weight: bold;" text="RESULTADOS" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
