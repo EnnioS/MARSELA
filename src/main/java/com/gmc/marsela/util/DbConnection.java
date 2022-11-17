@@ -16,7 +16,7 @@ public class DbConnection {
     }
 
     public void establecerConnection(){
-        String databaseName = "marsela_db_ices_2022";
+      /*  String databaseName = "marsela_db_ices_2022";
         String databaseUser = "root";
         String databasePassword = "123456";
         String url ="jdbc:mysql://localhost/"+databaseName;
@@ -26,10 +26,14 @@ public class DbConnection {
             connection = DriverManager.getConnection(url, databaseUser, databasePassword);
         }catch (Exception e){
             e.printStackTrace();
-        }
+        }*/
     }
 
-    public void closeConnection() throws SQLException {
-        connection.close();
+    public void closeConnection() {
+      /*  try {
+            connection.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }*/
     }
 }
