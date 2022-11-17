@@ -1,25 +1,16 @@
 package com.gmc.marsela.controller;
 
-import com.gmc.marsela.MarselaApp;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.awt.event.ActionEvent;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class EstudioController implements Initializable {
+public class CalculoController implements Initializable {
     @FXML
     private ComboBox<String> cbNivelContaminacion,  cbUnidadMedida;
     @FXML
@@ -50,7 +41,7 @@ public class EstudioController implements Initializable {
     public TextField getTxtCantDepBin() {
         return txtCantDepBin;
     }
-   //IEstudioService<Estudio> service = new EstudioServiceImp();
+
     @FXML
     protected void onCalc() {
 
@@ -145,7 +136,8 @@ public class EstudioController implements Initializable {
 
 
 
-
+    //salir de la aplicación
+        System.exit(0);
 
     }
 
@@ -353,32 +345,7 @@ public class EstudioController implements Initializable {
         return respuesta;
     }
 
-    @FXML
-    private void cerrarApp(){
-        //salir de la aplicación
-        System.exit(0);
-    }
 
 
-    @FXML
-    public void verHistorial(javafx.event.ActionEvent actionEvent) {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("view/historial-view.fxml"));
-
-        try {
-            Parent root = loader.load();
-            HistorialController historialController = loader.getController();
-            Scene scene = new Scene(root,802, 662);
-            Stage stage = new Stage();
-            stage.initModality(Modality.APPLICATION_MODAL);//esto no deja volver a la ventana anterir
-
-            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("marsela_stylesheet.css")).toExternalForm());
-            stage.setTitle("MARSELA - HISTORIAL");
-            stage.setScene(scene);
-            stage.showAndWait();
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }
 

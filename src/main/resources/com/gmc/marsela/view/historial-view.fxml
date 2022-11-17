@@ -10,18 +10,19 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
+
 <AnchorPane prefHeight="662.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gmc.marsela.controller.HistorialController">
    <children>
       <SplitPane dividerPositions="0.8685129740518961" layoutX="25.0" layoutY="24.0" prefHeight="662.0" prefWidth="802.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <TableView fx:id="tblViewEstudios" layoutX="14.0" layoutY="14.0" prefHeight="661.6" prefWidth="692.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView layoutX="14.0" layoutY="14.0" prefHeight="661.6" prefWidth="692.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn fx:id="colCiudad" prefWidth="162.40002447366714" text="CIUDAD" />
-                      <TableColumn fx:id="colSitio" minWidth="0.0" prefWidth="244.0" text="SITIO" />
-                        <TableColumn fx:id="colArea" prefWidth="112.79998779296875" text="ÁREA" />
-                        <TableColumn fx:id="colFecha" prefWidth="141.5999755859375" text="FECHA" />
+                      <TableColumn prefWidth="162.40002447366714" text="CIUDAD" />
+                      <TableColumn minWidth="0.0" prefWidth="244.0" text="SITIO" />
+                        <TableColumn prefWidth="112.79998779296875" text="ÁREA" />
+                        <TableColumn prefWidth="141.5999755859375" text="FECHA" />
                         <TableColumn prefWidth="31.2000732421875" />
                     </columns>
                   </TableView>

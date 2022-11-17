@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
@@ -13,12 +14,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="662.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gmc.marsela.controller.EstudioController">
+<AnchorPane prefHeight="662.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gmc.marsela.controller.CalculoController">
    <children>
-      <MenuBar fx:id="mainMenu" prefHeight="26.0" prefWidth="802.0">
+      <MenuBar prefHeight="26.0" prefWidth="802.0">
         <menus>
-          <Menu fx:id="menuVerHistorial" mnemonicParsing="false" onAction="#verHistorial" text="Ver Historial" />
-          <Menu fx:id="menuSalir" mnemonicParsing="false" onAction="#cerrarApp" text="Salir" />
+          <Menu mnemonicParsing="false" text="Ver Historial">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Salir">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
         </menus>
       </MenuBar>
       <Pane layoutX="4.0" layoutY="35.0" prefHeight="622.0" prefWidth="793.0">
